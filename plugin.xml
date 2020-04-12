@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         id="application"
+         point="org.eclipse.core.runtime.applications">
+      <application>
+         <run
+               class="com.sabir.training.rcp.first.Application">
+         </run>
+      </application>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            class="com.sabir.training.rcp.first.Perspective"
+            name="RCP Perspective"
+            id="com.sabir.training.rcp.first.perspective">
+      </perspective>
+   </extension>
+   <extension
+         id="product"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="com.sabir.training.rcp.first.application"
+            name="RCP First">
+         <property
+               name="appName"
+               value="RCP First">
+         </property>
+      </product>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            class="com.sabir.training.rcp.first.FirstViewPart"
+            id="com.sabir.training.rcp.first.viewID"
+            name="First View"
+            restorable="true">
+      </view>
+   </extension>
+
+</plugin>
